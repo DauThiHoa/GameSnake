@@ -1,0 +1,32 @@
+
+$background: white;
+$color-home : palevioletred;
+$text-align : center;
+body{
+  width: 100%;
+  height: 500px;
+  background: $background;
+}
+.img {
+  width: 70%;
+  height: 120%;
+  text-align: $text-align;
+  margin-left: 15%;
+}
+.home{
+  font-size: 222%;
+  color: $color-home;
+  margin-left: 5%;
+}
+.home:hover{
+  background: $color-home;
+  color: $background;
+  cursor: pointer;
+  border-radius: 10%;
+}
+.hr{
+  width: 70%;
+  text-align: $text-align;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}

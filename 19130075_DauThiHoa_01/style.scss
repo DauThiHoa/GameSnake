@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+$none : none ;
+$center : center ;
+$font-family : 'Times New Roman';
+$background : white;
+$font-weight : bold;
+$black : black ;
+$color-oishi : palevioletred;
+$font-family-oishi : "Impact";
+$border-oishi : mediumaquamarine ;
+$border-contentLevel : springgreen ;
+$color-fa-angle-double-right : #fd7e14;
+$color-play : turquoise ;
+$background-frame1 : #0dcaf0;
+$background-btn-1 : rgb(0,172,238);
+$background1-btn-1 : rgba(0,172,238,1);
+$background2-btn-1 : rgba(2,126,251,1);
+
+$background-btn-2 : rgb(255,27,0);
+$background1-btn-2 : rgba(255,27,0,1);
+$background2-btn-2 : rgba(251,75,2,1);
+
+$background-btn-3 : #f0ecfc;
+$background2-btn-3 : #c797eb;
+
+$background-btn-4 : rgb(251,33,117);
+$background1-btn-4 : rgba(251,33,117,1);
+$background2-btn-4 : rgba(234,76,137,1);
+$color-btn-4 : #fff;
+
+$background-btn-5 : rgb(255,151,0);
+$background1-btn-5 : rgba(255,151,0,1);
+
+$background-btn-6 : #89d8d3;
+$background1-btn-6 : #03c8a8;
+
+$font-family-custom-btn : 'Lato', sans-serif;
+
+a{
+  text-decoration: $none;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.body{
+  background: url('snake.png');
+  /*background: #b0b901;*/
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: $center;
+  align-items: $center;
+
+
+  #oishi {
+    font-size: 53px;
+    font-weight: $font-weight;
+    /*background-image: -webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);*/
+    /*-webkit-text-fill-color: transparent;*/
+    /*-webkit-background-clip: text;*/
+    color : $color-oishi;
+    font-family: $font-family-oishi;
+    margin-top: -1%;
+    margin-left: 6%;
+    width: 35%;
+    height: 40%;
+    background: $background;
+    text-align: $center;
+    margin-bottom: 4%;
+  }
+  #oishi:hover{
+    cursor: pointer;
+    border: 5px solid $border-oishi;
+    color: $background;
+  }
+
+}
+.score-box{
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+#scoreBox{
+  font-size: 25px;
+  margin: 10px 25px;
+  font-weight: $font-weight;
+  background: $background;
+  font-family: $font-family;
+  justify-self: start;
+  margin-left: 1250px;
+  font-weight: $font-weight;
+}
+
+#hiscoreBox{
+  font-size: 25px;
+  margin: 10px 13px;
+  background: $background;
+  font-weight: $font-weight;
+  font-family: $font-family;
+  justify-self:end;
+}
+
+#board{
+  background: $background;
+  width: 775px;
+  height: 620px;
+  border: 2px solid $black;
+  display: grid;
+  /* Số hàng số cột trong một mảng*/
+  grid-template-rows: repeat(18, 0.5fr);
+  grid-template-columns: repeat(18, 0.5fr);
+  margin-top: -45px;
+}
+.head{
+  width: 37px;
+  height: 34px;
+}
+.snake{
+  width: 35px;
+  height: 32px;
+  /*margin-right: -5px;*/
+  border-radius: 10px;
+}
+.food{
+  width: 36px;
+  height: 34px;
+}
+.fa-angle-double-right {
+  font-size: 250%;
+  font-weight: $font-weight;
+  color: $color-fa-angle-double-right ;
+  margin-left: 1480px;
+
+}
+
+.content {
+  font-size: 53px;
+  font-weight: $font-weight;
+  color : $color-oishi;
+  font-family: $font-family-oishi;
+  width: 35%;
+  height: 40%;
+  text-align: $center;
+  margin-left: 6%;
+
+}
+.contentLevel {
+  position: absolute;
+  z-index: 2;
+  background: $background;
+  border: 4px solid $border-contentLevel;
+  margin-top: -24%;
+  margin-left: 0%;
+  display: $none;
+}
+.container{
+  border-radius: 5%;
+  background: $background;
+}
+.play{
+  color: $color-play;
+  margin-bottom: 11%;
+}
+.play:hover{
+  background: $color-play;
+  color: $background;
+  cursor: pointer;
+}
+.help{
+  color: #31d2f2;
+  margin-bottom: 11%;
+}
+.help:hover{
+  background: #31d2f2;
+  color: $background;
+  cursor: pointer;
+}
+.level{
+  color: $border-contentLevel;
+}
+.level:hover{
+  background: $border-contentLevel;
+  color: $background;
+  cursor: pointer;
+}
+
+
+.frame {
+  width: 0%;
+  text-align: $center;
+  margin-top: 5%;
+  margin-left: 20%;
+
+  /* 3 */
+  .btn-1 {
+    background: $background-btn-1;
+    background: linear-gradient(0deg, $background1-btn-1 0%, $background2-btn-1 100%);
+    border: $none;
+    margin-left: 80%;
+
+  }
+  .btn-1:hover{
+    cursor: pointer;
+    color: $background-btn-1;
+    background: $background;
+    border: 2px solid $background-btn-1;
+  }
+  /* 8 */
+  .btn-3 {
+    background-color: $background-btn-3;
+    background-image: linear-gradient(315deg, $background-btn-3 0%, $background2-btn-3 74%);
+    border: $none;
+    margin-left: 80%;
+  }
+  .btn-3:hover{
+    cursor: pointer;
+    color: $background2-btn-3;
+    background: $background;
+    border: 2px solid $background2-btn-3;
+  }
+  .btn-5 {
+    background: $background-btn-5;
+    background: linear-gradient(0deg, $background1-btn-5 0%, $background2-btn-2 100%);
+    border: $none;
+    margin-left: 80%;
+  }
+  .btn-5:hover {
+    cursor: pointer;
+    color: $background-btn-5;
+    background: $background;
+    border: 2px solid $background-btn-5;
+  }
+}
+.frame1 {
+  position: absolute;
+  z-index: 2;
+  background: $background-frame1;
+  margin-top: -38%;
+  margin-left: 58%;
+
+  .btn-2 {
+    border: $none;
+    background: $background-btn-2;
+    background: linear-gradient(0deg, $background1-btn-2 0%, $background2-btn-2 100%);
+    margin-left: 140%;
+    cursor: pointer;
+
+  }
+  .btn-2:hover {
+    cursor: pointer;
+    color: $background-btn-2;
+    background: $background;
+    border: 2px solid $background-btn-2;
+  }
+  .btn-4 {
+    border: $none;
+    background: $background-btn-4;
+    background: linear-gradient(0deg, $background1-btn-4 0%, $background2-btn-4 100%);
+    color: $color-btn-4;
+    margin-left: 140%;
+  }
+  .btn-4:hover {
+    cursor: pointer;
+    color: $background-btn-4;
+    background: $background;
+    border: 2px solid $background-btn-4;
+  }
+
+  .btn-6 {
+    background-color: $background-btn-6;
+    background-image: linear-gradient(315deg, $background-btn-6 0%, $background1-btn-6 74%);
+    border: $none;
+    margin-left: 140%;
+  }
+  .btn-6:hover {
+    cursor: pointer;
+    color: $background-btn-6;
+    background: $background;
+    border: 2px solid $background-btn-6;
+  }
+}
+button {
+  margin: 1px;
+}
+.custom-btn {
+  background: #eccccf;
+  width: 125px;
+  height: 40px;
+  color: $color-btn-4;
+  border-radius: 5px;
+  font-family: $font-family-custom-btn;
+  font-weight: $font-weight;
+  font-size: 40%;
+}
+
+

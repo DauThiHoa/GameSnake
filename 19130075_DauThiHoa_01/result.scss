@@ -1,0 +1,298 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+$white : white ;
+$background_Box : #31d2f2 ;
+$bold : bold ;
+$none : none ;
+$center : center ;
+$font-family : "Times New Roman" ;
+$font-family-content : "Impact" ;
+$black : black ;
+$color-fa-angle : #fd7e14 ;
+$color-oishi : palevioletred ;
+$color-home-fa : springgreen ;
+$border-content : mediumseagreen ;
+$color-play : turquoise ;
+$background-frame1 : #0dcaf0;
+$color-frames : darkorange ;
+$color-home-fa-undo : deepskyblue;
+
+a {
+  text-decoration: $none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  // 6 8 9 11
+  background: url("result.png");
+  /*background: #b0b901;*/
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: $center;
+  align-items: $center;
+
+  #levelBox {
+    /*display: $none;*/
+    font-weight: $bold;
+    color: $white;
+    margin-left: 55%;
+    background: $background_Box;
+    //border-radius: 10%;
+  }
+
+  #scoreBox {
+    /*display: $none;*/
+    font-weight: $bold;
+    color: $white;
+    margin-left: 55%;
+    background: $background_Box;
+    //border-radius: 5%;
+  }
+  #oishi {
+    font-size: 53px;
+    font-weight: $bold;
+    /*background-image: -webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);*/
+    /*-webkit-text-fill-color: transparent;*/
+    /*-webkit-background-clip: text;*/
+    color: $color-oishi;
+    font-family: $font-family-content;
+    margin-top: -18%;
+    margin-left: 6%;
+    width: 35%;
+    height: 40%;
+    /*background: $$white;*/
+    text-align: $center;
+    margin-bottom: 4%;
+    margin-right: 3%;
+  }
+}
+
+.score-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+#hiscoreBox {
+  font-size: 25px;
+  margin: 10px 13px;
+  background: $white;
+  font-weight: $bold;
+  font-family: $font-family;
+  justify-self: end;
+}
+
+#hiscoreBox {
+  font-size: 25px;
+  margin: 10px 35px;
+  background: $white;
+  font-weight: $bold;
+  font-family: $font-family;
+  justify-self: end;
+}
+
+#board {
+  background: $white;
+  width: 775px;
+  height: 620px;
+  border: 2px solid $black;
+  display: grid;
+  /* Số hàng số cột trong một mảng*/
+  grid-template-rows: repeat(18, 0.5fr);
+  grid-template-columns: repeat(18, 0.5fr);
+  margin-top: -45px;
+}
+
+.head {
+  width: 37px;
+  height: 34px;
+}
+
+.snake {
+  width: 35px;
+  height: 32px;
+  /*margin-right: -5px;*/
+  border-radius: 10px;
+}
+
+.food {
+  width: 36px;
+  height: 34px;
+}
+
+.fa-angle-double-right {
+  font-size: 250%;
+  font-weight: $bold;
+  font-weight: $bold;
+  color: $color-fa-angle;
+  margin-left: 1480px;
+}
+
+/*#oishi:hover{*/
+/*    cursor: pointer;*/
+/*    border: 5px solid mediumaquamarine;*/
+/*    color: $$white;*/
+/*}*/
+.content {
+  font-size: 53px;
+  font-weight: $bold;
+  color: $color-oishi;
+  font-family: $font-family-content;
+  width: 35%;
+  text-align: $center;
+  margin-left: 6%;
+  margin-bottom: -14%;
+  height: 500px;
+  border: 5px solid $border-content;
+}
+
+.contentLevel {
+  position: absolute;
+  z-index: 2;
+  background: $white;
+  border: 4px solid $color-home-fa;
+  margin-top: -24%;
+  margin-left: 0%;
+  display: $none;
+}
+
+.container {
+  border-radius: 5%;
+  background: $white;
+}
+
+.play {
+  color: $color-play;
+  margin-bottom: 11%;
+}
+
+.play:hover {
+  background: $color-play;
+  color: $white;
+  cursor: pointer;
+}
+
+.help {
+  color: $background_Box;
+  margin-bottom: 11%;
+}
+
+.help:hover {
+  background: $background_Box;
+  color: $white;
+  cursor: pointer;
+}
+
+.level {
+  color: $color-home-fa;
+}
+
+.level:hover {
+  background: $color-home-fa;
+  color: $white;
+  cursor: pointer;
+}
+
+.frame {
+  width: 0%;
+  text-align: $center;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.frame1 {
+  position: absolute;
+  z-index: 2;
+  background: $background-frame1;
+  margin-top: -38%;
+  margin-left: 58%;
+}
+
+.star {
+  margin-bottom: 1%;
+  margin-top: -3%;
+  margin-left: 5%;
+  margin-right: 3%;
+}
+
+.content {
+  background: $white;
+  margin-right: 3%;
+
+  .img-snake {
+    height: 50%;
+    width: 50%;
+    margin-top: 4%;
+  }
+  .frames {
+    width: 50%;
+    height: 15%;
+    background: $white;
+    margin-left: 25%;
+    color: $color-frames;
+
+  }
+  .frames-home{
+    margin-top: 8%;
+
+    .home-fa-home-heart {
+      margin-right: 18%;
+      color: $color-home-fa;
+      text-align: $center;
+    }
+    .home-fa-home-heart:hover {
+      cursor: pointer;
+      background: $color-home-fa;
+      color: $white;
+      border-radius: 10%;
+    }
+    .home-fa-play {
+      color: $color-oishi;
+      text-align: $center;
+    }
+    .home-fa-play:hover {
+      cursor: pointer;
+      background: $color-oishi;
+      color: $white;
+      border-radius: 10%;
+    }
+    .home-fa-undo-alt {
+      margin-left: 14%;
+      color: $color-home-fa-undo;
+      text-align: $center;
+    }
+    .home-fa-undo-alt:hover {
+      cursor: pointer;
+      background: $color-home-fa-undo;
+      color: $white;
+      border-radius: 10%;
+    }
+    .home{
+      .fas {
+        margin-left: 2%;
+      }
+      .fa-undo-alt {
+        margin-right: 2%;
+      }
+
+    }
+  }
+}
+
+.star .fas {
+  font-size: 325%;
+}
+
+a {
+  text-decoration: $none;
+}
+
+/*# sourceMappingURL=result.css.map */

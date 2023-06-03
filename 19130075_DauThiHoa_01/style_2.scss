@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+$none : none ;
+$center : center ;
+$font-family : 'Times New Roman';
+$background : white;
+$font-weight : bold;
+$black : black ;
+$color-fa-angle-double-right : #fd7e14;
+$color-home : palevioletred;
+$color-level : forestgreen;
+
+$background-btn-1 : rgb(0,172,238);
+$background1-btn-1 : rgba(0,172,238,1);
+$background2-btn-1 : rgba(2,126,251,1);
+
+$background-btn-2 : rgb(255,27,0);
+$background1-btn-2 : rgba(255,27,0,1);
+$background2-btn-2 : rgba(251,75,2,1);
+
+$background-btn-3 : #f0ecfc;
+$background2-btn-3 : #c797eb;
+
+$background-btn-4 : rgb(251,33,117);
+$background1-btn-4 : rgba(251,33,117,1);
+$background2-btn-4 : rgba(234,76,137,1);
+$color-btn-4 : #fff;
+
+$background-btn-5 : rgb(255,151,0);
+$background1-btn-5 : rgba(255,151,0,1);
+
+$background-btn-6 : #89d8d3;
+$background1-btn-6 : #03c8a8;
+
+$font-family-custom-btn : 'Lato', sans-serif;
+
+a{
+  text-decoration: $none;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.body{
+  background: url('img/background_1.png');
+  /*background: #b0b901;*/
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: $center;
+  align-items: $center;
+
+  .home{
+    margin-left: -95%;
+    font-size: 222%;
+    color: $color-home;
+    margin-bottom: -3%;
+  }
+  .home:hover{
+    background: $color-home;
+    color: $background;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+
+}
+.score-box{
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+
+  #scoreBox{
+    font-size: 25px;
+    margin: 10px 25px;
+    font-weight: $font-weight;
+    background: $background;
+    font-family: $font-family;
+    justify-self: start;
+    margin-left: 1240px;
+    font-weight: $font-weight;
+  }
+
+  #hiscoreBox{
+    font-size: 25px;
+    margin: 10px 35px;
+    background: $background;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    justify-self:end
+
+  }
+}
+
+#board{
+  background: $background;
+  width: 755px;
+  height: 630px;
+  border: 5px solid #f18888;
+  //border: 2px solid $black;
+  display: grid;
+  /* Số hàng số cột trong một mảng*/
+  grid-template-rows: repeat(18, 0.5fr);
+  grid-template-columns: repeat(18, 0.5fr);
+  margin-top: -20%;
+}
+.head{
+  width: 40px;
+  height: 34px;
+}
+.snake{
+  width: 40px;
+  height: 31px;
+  /*margin-right: -5px;*/
+  border-radius: 10px;
+  margin-top: 2px;
+}
+.food{
+  width: 40px;
+  height: 32px;
+}
+.impediment{
+  width: 42px;
+  height: 36px;
+}
+.brick{
+  width: 41px;
+  height: 33px;
+}
+.tree{
+  width: 40px;
+  height: 33px;
+}
+#level {
+  font-size: 25px;
+  margin: 10px 25px;
+  font-weight: $font-weight;
+  background: $background;
+  font-family: $font-family;
+  justify-self: start;
+  font-weight: $font-weight;
+  margin-top: 2px;
+  color: $color-level;
+  margin-bottom: 40px;
+}
+.fa-angle-double-left {
+  font-size: 250%;
+  font-weight: $font-weight;
+  color: $color-fa-angle-double-right;
+  margin-right: 1450px;
+}
+.fa-angle-double-right {
+  font-size: 250%;
+  font-weight: $font-weight;
+  color: $color-fa-angle-double-right;
+  margin-left: 1450px;
+}
+
+
+.frame {
+  width: 45%;
+  text-align: $center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 125px;
+  height: 40px;
+  color: $color-btn-4;
+  border-radius: 5px;
+  font-family: $font-family-custom-btn;
+  font-weight: $font-weight;
+  font-size: 110%;
+}
+/* 3 */
+.btn-1 {
+  background: $background-btn-1;
+  background: linear-gradient(0deg, $background1-btn-1 0%, $background2-btn-1 100%);
+  border: $none;
+  margin-left: 231%;
+}
+.btn-1:hover{
+  cursor: pointer;
+  color: $background-btn-1;
+  background: $background;
+  border: 2px solid $background-btn-1;
+}
+.btn-2 {
+  //border: $none;
+  //background: $background-btn-2;
+  //background: linear-gradient(0deg, $background1-btn-2 0%, $background2-btn-2 100%);
+  color: $background-btn-2;
+  background: $background;
+  border: 2px solid $background-btn-2;
+  margin-left: 180%;
+  cursor: pointer;
+}
+.btn-2:hover {
+  cursor: pointer;
+  //color: $background-btn-2;
+  //background: $background;
+  //border: 2px solid $background-btn-2;
+  border: $none;
+  background: $background-btn-2;
+  background: linear-gradient(0deg, $background1-btn-2 0%, $background2-btn-2 100%);
+  color: white;
+}
+/* 8 */
+.btn-3 {
+  background-color: $background-btn-3;
+  background-image: linear-gradient(315deg, $background-btn-3 0%, $background2-btn-3 74%);
+  border: $none;
+  margin-left: 231%;
+}
+.btn-3:hover{
+  cursor: pointer;
+  color: $background2-btn-3;
+  background: $background;
+  border: 2px solid $background2-btn-3;
+}
+
+.btn-4 {
+  border: $none;
+  background: $background-btn-4;
+  background: linear-gradient(0deg, $background1-btn-4 0%, $background2-btn-4 100%);
+  color: $color-btn-4;
+  margin-left: 180%;
+}
+.btn-4:hover {
+  cursor: pointer;
+  color: $background-btn-4;
+  background: $background;
+  border: 2px solid $background-btn-4;
+}
+
+.btn-5 {
+  background: $background-btn-5;
+  background: linear-gradient(0deg, $background1-btn-5 0%, $background2-btn-2 100%);
+  border: $none;
+  margin-left: 231%;
+}
+.btn-5:hover {
+  cursor: pointer;
+  color: $background-btn-5;
+  background: $background;
+  border: 2px solid $background-btn-5;
+}
+
+.btn-6 {
+  background-color: $background-btn-6;
+  background-image: linear-gradient(315deg, $background-btn-6 0%, $background1-btn-6 74%);
+  border: $none;
+  margin-left: 180%;
+}
+.btn-6:hover {
+  cursor: pointer;
+  color: $background-btn-6;
+  background: $background;
+  border: 2px solid $background-btn-6;
+}

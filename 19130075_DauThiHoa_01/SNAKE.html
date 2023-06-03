@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="snakeHead.png" type="image/png" class="icon">
+    <title>19130075 - 01 - SNAKE</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!--    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">-->
+</head>
+<body>
+
+<div class="body">
+    <div id="oishi"> <span style="color: white">
+                    <span style="color: #0dcaf0">S</span>
+                    <span style="color: coral">N</span>
+                    <span style="color: plum">A</span>
+                    <span style="color: springgreen">K</span>
+                    <span style="color: red">E</span>
+                     </span>
+                     <span style="color: white">
+                    <span style="color: skyblue ; margin-left: 5%">O</span>
+                    <span style="color: teal">I</span>
+                    <span style="color: coral">S</span>
+                    <span style="color: blueviolet">H</span>
+                    <span style="color: lightcoral">I</span>
+                     </span>
+    </div>
+    <div class="content">
+        <a href="SNAKE_1.html">
+            <div class="container play">PLAY</div>
+        </a>
+        <a href="help.html">
+        <div class="container help">HELP</div>
+        </a>
+            <div class="container level">LEVEL
+            <div class="content contentLevel">
+                <div class="frame">
+                    <a href="SNAKE_1.html">
+                        <button class="custom-btn btn-1">LEVEL 1</button>
+                    </a>
+                    <a href="SNAKE_3.html">
+                        <button class="custom-btn btn-3">LEVEL 3</button>
+                    </a>
+                    <a href="SNAKE_5.html">
+                        <button class="custom-btn btn-5">LEVEL 5</button>
+                    </a>
+                </div>
+                <div class="frame frame1">
+                    <a href="SNAKE_2.html">
+                        <button class="custom-btn btn-2">LEVEL 2</button>
+                    </a>
+                    <a href="SNAKE_4.html">
+                        <button class="custom-btn btn-4">LEVEL 4</button>
+                    </a>
+                    <a href="SNAKE_6.html">
+                        <button class="custom-btn btn-6">LEVEL 6</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $(".body #oishi").click(function () {
+            document.querySelector('.body .content .level .contentLevel').style.display = "none";
+        })
+        $(".body .content .level").click(function () {
+            // $(".body .content .level .contentLevel").style.display = "block";
+            document.querySelector('.contentLevel').style.display = "block";
+        })
+
+    })
+</script>
+</body>
+</html>

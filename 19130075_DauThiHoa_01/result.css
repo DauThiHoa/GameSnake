@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  background: url("result.png");
+  /*background: #b0b901;*/
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.body #levelBox {
+  /*display: $none;*/
+  font-weight: bold;
+  color: white;
+  margin-left: 55%;
+  background: #31d2f2;
+}
+.body #scoreBox {
+  /*display: $none;*/
+  font-weight: bold;
+  color: white;
+  margin-left: 55%;
+  background: #31d2f2;
+}
+.body #oishi {
+  font-size: 53px;
+  font-weight: bold;
+  /*background-image: -webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*-webkit-background-clip: text;*/
+  color: palevioletred;
+  font-family: "Impact";
+  margin-top: -18%;
+  margin-left: 6%;
+  width: 35%;
+  height: 40%;
+  /*background: $$white;*/
+  text-align: center;
+  margin-bottom: 4%;
+  margin-right: 3%;
+}
+
+.score-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+#hiscoreBox {
+  font-size: 25px;
+  margin: 10px 13px;
+  background: white;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  justify-self: end;
+}
+
+#hiscoreBox {
+  font-size: 25px;
+  margin: 10px 35px;
+  background: white;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  justify-self: end;
+}
+
+#board {
+  background: white;
+  width: 775px;
+  height: 620px;
+  border: 2px solid black;
+  display: grid;
+  /* Số hàng số cột trong một mảng*/
+  grid-template-rows: repeat(18, 0.5fr);
+  grid-template-columns: repeat(18, 0.5fr);
+  margin-top: -45px;
+}
+
+.head {
+  width: 37px;
+  height: 34px;
+}
+
+.snake {
+  width: 35px;
+  height: 32px;
+  /*margin-right: -5px;*/
+  border-radius: 10px;
+}
+
+.food {
+  width: 36px;
+  height: 34px;
+}
+
+.fa-angle-double-right {
+  font-size: 250%;
+  font-weight: bold;
+  font-weight: bold;
+  color: #fd7e14;
+  margin-left: 1480px;
+}
+
+/*#oishi:hover{*/
+/*    cursor: pointer;*/
+/*    border: 5px solid mediumaquamarine;*/
+/*    color: $$white;*/
+/*}*/
+.content {
+  font-size: 53px;
+  font-weight: bold;
+  color: palevioletred;
+  font-family: "Impact";
+  width: 35%;
+  text-align: center;
+  margin-left: 6%;
+  margin-bottom: -14%;
+  height: 500px;
+  border: 5px solid mediumseagreen;
+}
+
+.contentLevel {
+  position: absolute;
+  z-index: 2;
+  background: white;
+  border: 4px solid springgreen;
+  margin-top: -24%;
+  margin-left: 0%;
+  display: none;
+}
+
+.container {
+  border-radius: 5%;
+  background: white;
+}
+
+.play {
+  color: turquoise;
+  margin-bottom: 11%;
+}
+
+.play:hover {
+  background: turquoise;
+  color: white;
+  cursor: pointer;
+}
+
+.help {
+  color: #31d2f2;
+  margin-bottom: 11%;
+}
+
+.help:hover {
+  background: #31d2f2;
+  color: white;
+  cursor: pointer;
+}
+
+.level {
+  color: springgreen;
+}
+
+.level:hover {
+  background: springgreen;
+  color: white;
+  cursor: pointer;
+}
+
+.frame {
+  width: 0%;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.frame1 {
+  position: absolute;
+  z-index: 2;
+  background: #0dcaf0;
+  margin-top: -38%;
+  margin-left: 58%;
+}
+
+.star {
+  margin-bottom: 1%;
+  margin-top: -3%;
+  margin-left: 5%;
+  margin-right: 3%;
+}
+
+.content {
+  background: white;
+  margin-right: 3%;
+}
+.content .img-snake {
+  height: 50%;
+  width: 50%;
+  margin-top: 4%;
+}
+.content .frames {
+  width: 50%;
+  height: 15%;
+  background: white;
+  margin-left: 25%;
+  color: darkorange;
+}
+.content .frames-home {
+  margin-top: 8%;
+}
+.content .frames-home .home-fa-home-heart {
+  margin-right: 18%;
+  color: springgreen;
+  text-align: center;
+}
+.content .frames-home .home-fa-home-heart:hover {
+  cursor: pointer;
+  background: springgreen;
+  color: white;
+  border-radius: 10%;
+}
+.content .frames-home .home-fa-play {
+  color: palevioletred;
+  text-align: center;
+}
+.content .frames-home .home-fa-play:hover {
+  cursor: pointer;
+  background: palevioletred;
+  color: white;
+  border-radius: 10%;
+}
+.content .frames-home .home-fa-undo-alt {
+  margin-left: 14%;
+  color: deepskyblue;
+  text-align: center;
+}
+.content .frames-home .home-fa-undo-alt:hover {
+  cursor: pointer;
+  background: deepskyblue;
+  color: white;
+  border-radius: 10%;
+}
+.content .frames-home .home .fas {
+  margin-left: 2%;
+}
+.content .frames-home .home .fa-undo-alt {
+  margin-right: 2%;
+}
+
+.star .fas {
+  font-size: 325%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=result.css.map */
+
+/*# sourceMappingURL=result.css.map */

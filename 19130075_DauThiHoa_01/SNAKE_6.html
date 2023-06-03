@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="snakeHead1.png" type="image/png" class="icon">
+    <title>19130075 - 01 - SNAKE - LEVEL6</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300&display=swap"
+            rel="stylesheet">
+
+<!--    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="style_6.css">
+</head>
+<body>
+
+<div class="body">
+    <a class="home" href="SNAKE.html">
+        <i class="fas fa-home-heart"></i>
+    </a>
+        <i class="fas fa-alarm-clock"></i>
+        <div class="clock" onclick="start()" >
+            <span id="h">Hours</span> :
+            <span id="m">Minutes</span> :
+            <span id="s">Seconds</span>
+        </div>
+        <div style="margin-right: 80% ; margin-top: 2%" class="fruit">
+<!--        <div class="fruit1">-->
+            <h2 class="fruit-1 fruit1"><img class="fruit1-Img fruit1Img" style="height: 50px ; width: 50px" src="food/fruit1.png"><span class="fruit1-Span fruit1Span">0</span>/<span>5</span></h2>
+            <h2 class="fruit-1 fruit2"><img class="fruit1-Img fruit2Img" style="height: 50px ; width: 50px" src="food/fruit2.png"><span class="fruit1-Span fruit2Span">0</span>/<span>4</span></h2>
+            <h2 class="fruit-1 fruit3"><img class="fruit1-Img fruit3Img" style="height: 50px ; width: 50px" src="food/fruit3.png"><span class="fruit1-Span fruit3Span">0</span>/<span>3</span></h2>
+            <h2 class="fruit-1 fruit4"><img class="fruit1-Img fruit4Img" style="height: 50px ; width: 50px" src="food/fruit4.png"><span class="fruit1-Span fruit4Span">0</span>/<span>2</span></h2>
+            <h2 class="fruit-1 fruit5"><img class="fruit1-Img fruit5Img" style="height: 50px ; width: 50px" src="food/fruit5.png"><span class="fruit1-Span fruit5Span">0</span>/<span>1</span></h2>
+<!--        </div>-->
+        </div>
+    <div id="level">LEVEL: 6</div>
+    <div class="score-box">
+        <div id="scoreBox">Score: 0</div>
+        <div id="hiscoreBox">High: 0</div>
+    </div>
+
+    <div class="frame score-box">
+        <a href="SNAKE_1.html">
+            <button class="custom-btn btn-1">LEVEL 1</button>
+        </a>
+        <a href="SNAKE_2.html">
+            <button class="custom-btn btn-2">LEVEL 2</button>
+        </a>
+        <a href="SNAKE_3.html">
+            <button class="custom-btn btn-3">LEVEL 3</button>
+        </a>
+        <a href="SNAKE_4.html">
+            <button class="custom-btn btn-4">LEVEL 4</button>
+        </a>
+        <a href="SNAKE_5.html">
+            <button class="custom-btn btn-5">LEVEL 5</button>
+        </a>
+        <a href="SNAKE_6.html">
+            <button class="custom-btn btn-6">LEVEL 6</button>
+        </a>
+    </div>
+    <div id="board"></div>
+
+<!--    <div class="pyro"><div class="before"></div><div class="after"></div>-->
+    </div>
+</div>
+</body>
+<script src="index_6.js"></script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="snakeHead.png" type="image/png" class="icon">
+    <title>19130075 - 01 - SNAKE-RESULT</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="result.css">
+
+    <!--    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">-->
+</head>
+<body>
+
+<div class="body">
+<!--    Đếm số level của người chơi đã đạt được-->
+    <h1 id="levelBox">Screen : 0 </h1>
+<!--    Điểm của level trước đó-->
+    <h2 id="scoreBox">Score : 0 </h2>
+
+    <div id="oishi"> <span style="color: white">
+                    <span style="color: #0dcaf0">H</span>
+                    <span style="color: coral">I</span>
+                    <span style="color: plum">G</span>
+                    <span style="color: springgreen">H</span>
+                     </span>
+                     <span style="color: white">
+                    <span style="color: skyblue ; margin-left: 5%">S</span>
+                    <span style="color: teal">C</span>
+                    <span style="color: coral">O</span>
+                    <span style="color: blueviolet">R</span>
+                    <span style="color: lightcoral">E</span>
+                     </span>
+    </div>
+
+    <div class="star">
+        <i class="fas fa-star fa-star1"></i>
+        <i class="fas fa-star fa-star2"></i>
+        <i class="fas fa-star fa-star3"></i>
+    </div>
+
+    <div class="content">
+        <img class="img-snake" src="img/snake.png">
+        <div class="frames">
+            <h2 class="frames-score"> </h2>
+        </div>
+        <div class="frames-home">
+            <a class="home home-fa-home-heart" href="SNAKE.html">
+                    <i class="fas fa-home-heart"></i>
+            </a>
+            <a class="home home-fa-play" href="SNAKE_1.html">
+                <i class="fas fa-play"></i>
+            </a>
+            <a class="home home-fa-undo-alt" >
+                <i class="fas fa-undo-alt"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script src="result.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+<!--    Click chuột vào nút button undo để trở về được level trước đó -->
+    $(document).ready(function () {
+        $(".body .content .frames-home .home-fa-undo-alt .fa-undo-alt").click(function () {
+            window.location = "SNAKE_"+ levelval +".html";
+        })
+    })
+
+</script>
+</body>
+</html>
